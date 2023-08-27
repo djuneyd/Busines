@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="UTF-8">
+    <title>Registration</title>
+</head>
+
+<style>
+    body {
+        font-family: impact;
+        background-color: #87CEEB;
+    }
+    .table {
+        margin: auto;
+    }
+    .reg-but-block:hover,
+    .reg-but-block a:hover {
+        color:#f2f9fe;
+        background-color: #24334a;
+    }
+    .table input {
+        padding: 10px 0px;
+        width: 400px;
+        border-radius: 10px;
+        background-color: transparent;
+        font-size: 20px;
+        margin-top: 20px;
+    }
+    .reg-but-block {
+        margin: auto;
+        margin-top: 50px;
+        width: 300px;
+        padding: 10px;
+        background-color: #ffffff;
+        text-align: center;
+        border-radius: 10px;
+        border: 2px solid rgb(0, 0, 0);
+        cursor: pointer;
+        align-self: center;
+    }
+    .reg-but {
+        text-decoration: none;
+        color: #000000;
+    }
+
+    .form__button {
+        border: 1px solid rgb(0, 0, 0);
+        background: #ffffff;
+        border-radius: 10px;
+        color: rgb(0, 0, 0);
+        padding: 10px;
+        font: inherit;
+        width: 200px;
+        height: 50px;
+        cursor: pointer;
+        transition: 0.2s;
+    }
+
+    .form__button:hover,
+    .button-back:hover {
+        color: #F8FAFC;
+        background:#24334a;
+    }
+    .main-login {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .button {
+        margin-left: 25%;
+        margin-top: 50px;
+    }
+    .error {
+        color: #ffffff;
+        font-family: 'Courier New', Courier, monospace;
+    }
+    .error-table {
+        margin: auto;
+        margin-top: 260px;
+    }
+    .button-table {
+        margin: auto;
+        margin-top: 20px;
+    }
+    .button-back {
+        padding: 10px 20px;
+        border: 1px solid black;
+        background-color: white;
+        border-radius: 10px;
+        text-decoration: none;
+        color: black;
+    }
+</style>
+
+<body>
+    {% block content %}
+    <table class="error-table">
+        <tr>
+            <td>
+                <p class="error">{{error}}</p>
+            </td>
+        </tr>
+    </table>
+    <main class="main-login">
+        <form action="{{ url_for('reg') }}" method="post">
+            <table>
+                <tr>
+                    <td>
+                        <label for="email" class="table">
+                            <input type="email" name="email" id="email" placeholder="Введите e-mail" required>
+                        </label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="password" class="table">
+                            <input type="password" name="password" id="password" placeholder="Введите пароль" required>
+                        </label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="text" class="table">
+                            <input type="text" name="text" id="text" placeholder="Введите ник-нэйм" required>
+                        </label>
+                    </td>
+                </tr>
+            </table>
+            <div class="button">
+                <button class="form__button">Создать аккаунт!</button>
+            </div>
+        </form>      
+    </main>
+    <table class="button-table">
+        <tr>
+            <td>
+                <a href="/" class="button-back">Назад</a>
+            </td>
+        </tr>
+    </table>
+    {% endblock %}
+</body>
+
+</html>

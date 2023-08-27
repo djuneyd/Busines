@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Products_menu</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body id="page-1">
+    {% block content %}
+    <div class = "cloud">
+        <h1 class="topic-page-1">Выбор товара</h1>
+    </div>
+    <div id="table-page-1">
+        <table>
+            <tr>
+                <td>
+                    <img src="https://kartinkof.club/uploads/posts/2022-09/thumbs/1662343272_1-kartinkof-club-p-novie-i-krasivie-kartinki-banka-1.jpg" alt="Тут картинка банки с воздухом :D">
+                </td>
+                <td>
+                    <img src="https://kartinkof.club/uploads/posts/2022-09/thumbs/1662343288_12-kartinkof-club-p-novie-i-krasivie-kartinki-banka-19.jpg" alt="Тут картинка банки с воздухом :D">
+                </td>
+                <td>
+                    <img src="https://kartinkof.club/uploads/posts/2022-09/thumbs/1662343279_4-kartinkof-club-p-novie-i-krasivie-kartinki-banka-7.jpg" alt="Тут картинка банки с воздухом :D">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <h3 id="product-name1-page-1">Альпийская свежесть</h3>
+                </td>
+                <td>
+                    <h3 id="product-name2-page-1">Пук мопса</h3>
+                </td>
+                <td>
+                    <h3 id="product-name3-page-1">Морской бриз</h3>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <a href="/Alp_Fresh/15">Подробнее</a>
+                </td>
+                <td>
+                    <a href="/Pug's_Fart/50">Подробнее</a>
+                </td>
+                <td>
+                    <a href="/Sea_Breaze/30">Подробнее</a>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="main-button-block">
+        <a class="main-button" href="/">На главную</a>
+    </div>
+    {% endblock %}
+</body>
+
+</html>

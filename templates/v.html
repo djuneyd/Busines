@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>V</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body id="v">
+    <div class = "cloud">
+        <h1 class="topic-page-1">Выберите обьём</h1>
+    </div>
+    {% block content %}
+    <table id="v-table">
+        <tr>
+            <td>
+                <div><img src="https://www.glasmeister.com/media/fe/56/eb/1672223209/01ebd77c695bc63e65e4255ed0345004-Bryn-100ml-hoog.jpg" alt="Баночка :D"></div>
+            </td>
+            <td>
+                <a href="{{price + '/1'}}">- 100мл</a>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div><img src="https://www.acspack.co.za/wp-content/uploads/2019/10/MMP_3693B.jpg" alt="Баночка :D"></div>
+            </td>
+            <td>
+                <a href="{{price + '/2.5'}}">- 250мл</a>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div><img src="https://tricorbraun.ca/content/images/thumbs/0014648_12-oz-clear-glass-jar-70-2035-lug-neck-finish-round-base.jpeg" alt="Баночка :D"></div>
+            </td>
+            <td>
+                <a href="{{price + '/5'}}">- 500мл</a>
+            </td>
+        </tr>
+    </table>
+    {% endblock %}
+</body>
+
+</html>

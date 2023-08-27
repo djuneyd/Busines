@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Oxygen_main_menu</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body id="page-2">
+    {% block content %}
+    <div class = "cloud">
+    <h1 class="topic-page-1">Oxygen</h1>
+    </div>
+    <div id="table-main-page">
+        <table>
+            <tr>
+                <td>
+                    <img src="https://kartinkof.club/uploads/posts/2022-09/thumbs/1662343272_1-kartinkof-club-p-novie-i-krasivie-kartinki-banka-1.jpg" alt="Тут картинка банки с воздухом :D">
+                </td>
+                <td>
+                    <img src="https://kartinkof.club/uploads/posts/2022-09/thumbs/1662343288_12-kartinkof-club-p-novie-i-krasivie-kartinki-banka-19.jpg" alt="Тут картинка банки с воздухом :D">
+                </td>
+                <td>
+                    <img src="https://kartinkof.club/uploads/posts/2022-09/thumbs/1662343279_4-kartinkof-club-p-novie-i-krasivie-kartinki-banka-7.jpg" alt="Тут картинка банки с воздухом :D">
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div id="products-button">
+        <a href="products" id="products-button-text">Наши товары:</a>
+    </div>
+    <p id="main-page-info">
+        "Наша компания предоставляет профессиональные услуги по продаже воздуха. Здесь вы можете найти воздух на любой цвет и вкус. Ребенок вы, работяга или обычный старик, вы не можете говорить что вы дышали, пока не попробовали наш воздух. Мы начали свою работу в далеком 2023 году и заслужили доверие годами упорного труда. Наш воздух получил свысшую оценку в таких журналах как <b>neskamstoproc.com</b> и многих других всемирно известных. Купите нашу продукцию и вы не забудете о нас до конца своей жизни. <q>Oxygen - лучше воздух в легких, чем тело в гробу</q>"
+    </p>
+    <table id="main-page-buttons-table">
+        <tr>
+            <td>
+                <div id="self-air-button">
+                    <a href="Self_air" id="self-air-button-text">Какой воздух подходит вам?</a>
+                </div>
+            </td>
+            <td>
+                <div id="rates-button">
+                    <a href="rates" id="products-button-text" >Наши отзывы</a>
+                </div>
+            </td>
+            <td>
+                <div id="complain-button">
+                    <a href="https://www.youtube.com/watch?v=xvFZjo5PgG0" id="products-button-text" target ="_blank">Пожаловаться</a>
+                </div>
+            </td>
+        </tr>
+    </table>
+    {% endblock %}
+</body>
+
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Alp_fresh</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body class="page-3">
+    {% block content %}
+    <div class="main-button-pr-block">
+        <a class="main-button-pr" href="/">На главную</a>
+    </div>
+    <table class="alp-fresh-table">
+        <tr>
+            <td>
+                <div class="alp-fresh-table-info">
+                    <table>
+                        <tr>
+                            <td>
+                                <h2 class="alp-fresh-topic">Пук мопса</h2>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <h3 class="alp-fresh-born-place">Место происхождения - Кишечник мопса</h3>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <h3 class="alp-fresh-flavor">Запах - Жаренная радуга</h3>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <h3 class="alp-fresh-use-way">Способ применения - Через трубочку</h3>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </td>
+            <td>
+                <div class="alp-fresh-image">
+                    <img src="https://kartinkof.club/uploads/posts/2022-09/thumbs/1662343288_12-kartinkof-club-p-novie-i-krasivie-kartinki-banka-19.jpg" alt="Тут картинка банки с воздухом :D">
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <h3 class="alp-fresh-cost">Цена - 50$ за 100мл</h3>
+            </td>
+            <td>
+                <div class="buy-button">
+                    <a href="{{price + '/V'}}">купить</a>
+                    
+                </div>
+            </td>
+        </tr>
+    </table>
+    {% endblock %}
+</body>
+
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+</head>
+
+<style>
+    body {
+        font-family: impact;
+        background-color: #87CEEB;
+    }
+    .table {
+        margin: auto;
+    }
+    .button {
+        width: 10%;
+        padding: 10px;
+        margin-top: 50px;
+        min-width: 300px;
+        text-align: center;
+        text-decoration: none;
+        cursor: pointer;
+        align-self: center;
+        border: none;
+        border-radius: 10px;
+        background: #ffffff;
+        font: inherit;
+        color: #000000;
+        border: 2px solid rgb(0, 0, 0);
+        margin-left: 42%;
+    }
+    .button:hover,
+    .reg-but-block:hover,
+    .reg-but-block a:hover {
+        color:#f2f9fe;
+        background-color: #24334a;
+    }
+    .table input {
+        padding: 10px 0px;
+        width: 400px;
+        border-radius: 10px;
+        background-color: transparent;
+        font-size: 20px;
+        margin-top: 20px;
+    }
+    .reg-but-block {
+        margin: auto;
+        margin-top: 50px;
+        width: 300px;
+        padding: 10px;
+        background-color: #ffffff;
+        text-align: center;
+        border-radius: 10px;
+        border: 2px solid rgb(0, 0, 0);
+        cursor: pointer;
+        align-self: center;
+    }
+    .reg-but {
+        text-decoration: none;
+        color: #000000;
+    }
+    .error {
+        color: #ffffff;
+        font-family: 'Courier New', Courier, monospace;
+    }
+    .error-table {
+        margin: auto;
+        margin-top: 250px;
+    }
+</style>
+
+<body>
+    {% block content %}
+    <table class="error-table">
+        <tr>
+            <td>
+                <p class="error">{{error}}</p>
+            </td>
+        </tr>
+    </table>
+    <form action="{{ url_for('login') }}" method="POST">
+        <div>
+            <table class="table">
+                <tr>
+                    <td>
+                        <label for="email">
+                            <input type="email" name="email" id="email" placeholder="Введите e-mail" required>
+                        </label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="password">
+                            <input type="password" name="password" id="password" placeholder="Введите пароль" required>
+                        </label>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <button class="button">Войти!</button>
+    </form>
+    <div class="reg-but-block">
+        <a href="/registration" class="reg-but">Зарегестрироваться!</a>
+    </div>
+        
+    {% endblock %}
+</body>
+
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <title>Calculation</title>
+</head>
+
+<body id="calculation">
+    {% block content %}
+    <div class = "cloud">
+        <h1 class="topic-page-1">Цена: {{result}}$</h1>
+    </div>
+    <form action="{{ url_for('error') }}" method="post" class="form">
+        <div class="user">
+          <ul class="user-info">
+              <li class="user-info__item">
+                  <label for="name">Ф.И.О</label>
+                  <input type="text" name="name" id="name" placeholder="Введите ваше ФИО" required>
+              </li>
+              <li class="user-info__item">
+                  <label for="number-of-card">Номер карточки</label>
+                  <input type="text" name="number" id="number" placeholder="Введите номер вашей карточки" required>
+                  
+              </li>
+          </ul>
+          <!--Поля для адреса и даты-->
+          <ul class="address-date">
+              <li class="user-info__item">
+  
+                  <label for="address">Ваш адрес</label>
+                  <input type="text" name="address" id="address" placeholder="Укажите ваш адрес" required>
+              </li>
+              <li class="user-info__item">
+  
+                  <label for="date">Срок годности вашей карты</label>
+                  <input type="date" name="date" id="date" required>
+              </li>
+          </ul>
+          <ul class="address-date">
+            <li class="user-info__item">
+                <label for="email">Ваш e-mail</label>
+                <input type="email" name="email" id="email" placeholder="Укажите ваш e-mail" required>
+            </li>
+            <li class="user-info__item">
+                <label for="cvv">Ваш CVV</label>
+                <input type="text" name="cvv" id="cvv" placeholder="Укажите ваш CVV" required>
+            </li>
+         </ul>
+      </div>
+      <button class="button" type="submit" >Готово!</button>
+      </form>
+    {% endblock %}
+
+</body>
+
+</html>

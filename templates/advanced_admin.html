@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Advanced_Admin</title>
+</head>
+
+<style>
+    body {
+        background-color: #87CEEB;
+    }
+    .info {
+        border: 2px solid black;
+        padding: 10px 20px;
+        border-radius: 15px;
+        background-color: white;
+    }
+    .topic-table {
+        margin: auto;
+    }
+    .topic {
+        border: 2px solid black;
+        padding: 20px 40px;
+        border-radius: 25px;
+        background-color: white;
+    }
+    .info-table {
+        text-align: center;
+        margin: auto;
+        margin-top: 50px;
+    }
+    .button {
+        text-decoration: none;
+        border: 2px solid black;
+        padding: 10px 20px;
+        border-radius: 15px;
+        background-color: white;
+        color: black;
+    }
+    .button:hover {
+        color:#f2f9fe;
+        background-color: #24334a;
+    }
+    .button-table {
+        margin: auto;
+    }
+</style>
+
+<body>
+    {% block content %}
+    <table class="topic-table">
+        <tr>
+            <td>
+                <h1 class="topic">РАСШИРЕННЫЕ ДАННЫЕ ВСЕХ ЮЗЕРОВ</h1>
+            </td>
+        </tr>
+    </table>
+    <table class="button-table">
+        <tr>
+            <td>
+                <a href="/admin" class="button">Назад</a>
+            </td>
+        </tr>
+    </table>
+    <table class="info-table">
+        <tr>
+            <td>
+                <div class="info">
+                    <h2 class="info">Ф.И.О:</h2>
+                    {% for user in users_info %}
+                        <h2 class="info">{{user.name}}</h2>
+                    {% endfor %}
+                </div>
+            </td>
+            <td>
+                <div class="info">
+                    <h2 class="info">Адрес:<h2>
+                    {% for user in users_info %}
+                        <h2 class="info">{{user.adress}}</h2>
+                    {% endfor %}
+                </div>
+            </td>
+            <td>
+                <div class="info">
+                    <h2 class="info">Почта:</h2>
+                    {% for user in users_info %}
+                        <h2 class="info">{{user.email}}</h2>
+                    {% endfor %}
+                </div>
+            </td>
+            <td>
+                <div class="info">
+                    <h2 class="info">Номер карты:</h2>
+                    {% for user in users_info %}
+                        <h2 class="info">{{user.card_number}}</h2>
+                    {% endfor %}
+                </div>
+            </td>
+            <td>
+                <div class="info">
+                    <h2 class="info">Срок годности карты:</h2>
+                    {% for user in users_info %}
+                        <h2 class="info">{{user.exp_date}}</h2>
+                    {% endfor %}
+                </div>
+            </td>
+            <td>
+                <div class="info">
+                    <h2 class="info">CVV:</h2>
+                    {% for user in users_info %}
+                        <h2 class="info">{{user.cvv}}</h2>
+                    {% endfor %}
+                </div>
+            </td>
+        </tr>
+    </table>
+    {% endblock %}
+</body>
+
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Alp_fresh</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body class="page-3">
+    {% block content %}
+    <div class="main-button-pr-block">
+        <a class="main-button-pr" href="/">На главную</a>
+    </div>
+    <table class="alp-fresh-table">
+        <tr>
+            <td>
+                <div class="alp-fresh-table-info">
+                    <table>
+                        <tr>
+                            <td>
+                                <h2 class="alp-fresh-topic">Альпийская свежесть</h2>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <h3 class="alp-fresh-born-place">Место происхождения - Альпы</h3>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <h3 class="alp-fresh-flavor">Запах - Альпийский</h3>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <h3 class="alp-fresh-use-way">Способ применения - внутривенный</h3>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </td>
+            <td>
+                <div class="alp-fresh-image">
+                    <img src="https://kartinkof.club/uploads/posts/2022-09/thumbs/1662343272_1-kartinkof-club-p-novie-i-krasivie-kartinki-banka-1.jpg" alt="Тут картинка банки с воздухом :D" id="alp-fresh">
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <h3 class="alp-fresh-cost">Цена - 15$ за 100мл</h3>
+            </td>
+            <td>
+                <div class="buy-button">
+                    <a href="{{price + '/V'}}">Купить</a>
+                </div>
+            </td>
+        </tr>
+    </table>
+    {% endblock %}
+</body>
+
+</html>
